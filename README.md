@@ -55,7 +55,6 @@ D7 = X Y Z
 ## Figure -04 8 to 3 Decoder implementation 
 
 ### Procedure
-/* write all the steps invloved */
 
 
 
@@ -65,6 +64,7 @@ Program for Endocers and Decoders  and verify its truth table in quartus using V
 Developed by: Koduru Sanath Kumar Reddy
 RegisterNumber:  212221240024
 */
+~~~
 Encoder:-
 
 module encoder(a,b,c,d0,d1,d2,d3,d4,d5,d6,d7);
@@ -91,7 +91,7 @@ assign d6 = (a&b&~c);
 assign d7 = (a&b&c);
 endmodule
 
-
+~~~
 
 
 
