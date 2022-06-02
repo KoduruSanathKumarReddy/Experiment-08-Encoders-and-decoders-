@@ -62,9 +62,34 @@ D7 = X Y Z
 ### PROGRAM 
 /*
 Program for Endocers and Decoders  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
+Developed by: Koduru Sanath Kumar Reddy
+RegisterNumber:  212221240024
 */
+Encoder:-
+
+module encoder(a,b,c,d0,d1,d2,d3,d4,d5,d6,d7);
+output a,b,c;
+input d0,d1,d2,d3,d4,d5,d6,d7;
+or(a,d4,d5,d6,d7);
+or(b,d2,d3,d6,d7);
+or(c,d1,d3,d5,d7);
+endmodule
+
+
+Decoder:-
+
+module decoder(d0,d1,d2,d3,d4,d5,d6,d7,a,b,c);
+output d0,d1,d2,d3,d4,d5,d6,d7;
+input a,b,c;
+assign d0 = (~a&~b&~c);
+assign d1 = (~a&~b&c);
+assign d2 = (~a&b&~c);
+assign d3 = (~a&b&c);
+assign d4 = (a&~b&~c);
+assign d5 = (a&~b&c);
+assign d6 = (a&b&~c);
+assign d7 = (a&b&c);
+endmodule
 
 
 
@@ -73,7 +98,11 @@ RegisterNumber:
 
 ### RTL LOGIC  
 
+## Encoder
+![](encodert.png)
 
+## Decoder
+![](decoderrt.png)
 
 
 
@@ -82,14 +111,21 @@ RegisterNumber:
 
 ### TIMING DIGRAMS  
 
+## Encoder
+![](entim.png)
+## Decoder
+![](detim.png)
+
 
 
 
 
 ### TRUTH TABLE 
 
-
-
+## Encoder
+![](enTruth.png)
+## Decoder
+![](deTruth.png)
 
 
 
